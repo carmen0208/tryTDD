@@ -24,4 +24,5 @@ Please feel free to use a different markup language if you do not plan to run
 ```sh
 rails g rspec:install
 bundle exec spring binstub --all
+rails generate simple_form:install --bootstrap
 ```
