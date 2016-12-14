@@ -1,5 +1,5 @@
 This is about the Notes of TDD courses
-# Theory 
+# Theory
 * RED
 * GREEN
 * REFACTOR
@@ -8,3 +8,8 @@ This is about the Notes of TDD courses
 
 * Acceptance Test - > Integration Test -> Unit test
 
+## How to write Acceptance Test
+
+* Happy path
+* Sad Path
+   * When writing sad path, don't try write all of them failed scenarios, just one - two major sad path it's enough. 
