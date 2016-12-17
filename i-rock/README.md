@@ -26,3 +26,46 @@ rails g rspec:install
 bundle exec spring binstub --all
 rails generate simple_form:install --bootstrap
 ```
+
+## FactoryGilr -> fixture data (see spec/factories) folder
+
+## Cucumber --> every body, not just developer can create this test
+
+```ruby
+Feature: Create new achievement
+  In order ....
+  As ...
+  I want to
+```
+
+```ruby
+Feature: Create new achievement
+  In order to keep and share my achievements
+  As an user
+  I want to create them
+
+  Scenario: User creates new achievement
+    Given I am a logged in User
+    When I create new public achievement
+    Then anybody can see this achievement online
+```
+
+```sh
+# generate cucumber
+rails g cucumber:install
+```
+
+
+```sh
+#run cucumber
+bin/cucumber
+```
+
+## Using spring
+```ruby
+bundle exec spring binstub --all
+#* bin/rake: spring already present
+#* bin/cucumber: generated with spring
+#* bin/rspec: spring already present
+#* bin/rails: spring already present
+```
