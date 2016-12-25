@@ -24,7 +24,7 @@ describe AchievementsController do
     end
 
     describe "Post create" do
-      let(:achievement_params) { {title: "title",} }
+      let(:achievement_params) { {title: "title"} }
       let(:create_achievement) { instance_double(CreateAchievement)}
       let(:achievement) {instance_double(Achievement)}
 
@@ -59,7 +59,7 @@ describe AchievementsController do
 
         it 'assigns achievement to template' do
           post :create, achievement: achievement_params
-          expect(assigns(:achievement)).to eq(achievement) 
+          expect(assigns(:achievement)).to eq(achievement)
         end
       end
     end
