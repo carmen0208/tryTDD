@@ -20,6 +20,8 @@ gem 'redcarpet'
 
 gem 'devise'
 
+gem 'carrierwave'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
@@ -35,5 +37,5 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
-  gem 'shoulda-matchers', require: false
+  # gem 'shoulda-matchers', require: false
 end

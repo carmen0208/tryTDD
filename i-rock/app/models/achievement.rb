@@ -11,6 +11,8 @@ class Achievement < ActiveRecord::Base
 
   enum privacy: [:public_access, :private_access, :friends_access]
 
+  mount_uploader :cover_image, CoverImageUploader
+
   def description_html
     Redcarpet::Markdown.new(Redcarpet::Render::HTML).render(description)
   end
