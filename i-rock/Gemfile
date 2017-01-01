@@ -21,6 +21,7 @@ gem 'redcarpet'
 gem 'devise'
 
 gem 'carrierwave'
+gem 'twitter'
 
 group :development, :test do
   gem 'byebug'
@@ -37,5 +38,7 @@ group :test do
   gem 'capybara'
   gem 'cucumber-rails', require: false
   gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
   # gem 'shoulda-matchers', require: false
 end

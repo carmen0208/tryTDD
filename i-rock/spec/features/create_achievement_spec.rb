@@ -9,7 +9,7 @@ feature 'create new achievement' do
   background do
     login_form.visit_page.login_as(user)
   end
-  scenario 'create new achievement with valid data' do
+  scenario 'create new achievement with valid data', :vcr do
     # new_achievement_form = NewAchievementForm.new
     # login_form.visit_page.login_as(user)
     new_achievement_form.visit_page.fill_in_with(
@@ -17,14 +17,18 @@ feature 'create new achievement' do
       cover_image: 'cover_image.png'
     ).submit
 
+    #Email test
     expect(ActionMailer::Base.deliveries.count).to eq(1)
     expect(ActionMailer::Base.deliveries.last.to).to include(user.email)
 
+    # File upload test
     expect(Achievement.last.cover_image_identifier).to eq('cover_image.png')
 
     expect(page).to have_content('Achievement has been created')
     expect(Achievement.last.title).to eq('Read a book')
 
+    # 3rd Party API test
+    expect(page).to have_content("We tweeted for you! https://twitter.com")
     # visit('/')
     # click_on('New Achievement')
     #
